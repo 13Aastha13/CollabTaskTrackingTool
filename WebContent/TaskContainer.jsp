@@ -28,7 +28,9 @@ if (CurrentCtUser != null)
 <button type="button" onclick="OnRefreshClick();">Refresh</button>
 <!--<button type="button" onclick="CreateTableFromJSON();">Refresh</button>-->
 </div>
+<p><input type="button" id="addRow" value="Add New Row" onclick="addRow()" /></p>
 <div id="showData"></div>
+<p><input type="button" id="bt" value="Sumbit Data" onclick="sumbit()" /></p>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 </html>

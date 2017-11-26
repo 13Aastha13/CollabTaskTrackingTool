@@ -9,8 +9,9 @@
 <body>
 <%
 	String CurrentCtUserName ="";
-	if (request.getSession(false) == null)
+	if (request.getSession(false).getAttribute("CtUser") == null)
 	{
+		System.out.println("session doesn't exist");
 		response.sendRedirect(request.getContextPath()+"/index.html");
 
 	} 

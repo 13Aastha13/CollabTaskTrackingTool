@@ -15,7 +15,7 @@ public class CtUsersDao extends BaseDao
 	public static List<CtUsers> getUser(String email, String password)
 	{
 		String sql= "select * from " +  CtConstants.DB_Ct_UserTable + " where email = UPPER('" + email + "')" + " and password ='" + password +"'" ;
-		return(getInstance().getCustomData(sql));
+		return(getInstance().getCustomDataQuery(sql));
 	}
 	public static CtUsersDao getInstance()
 	{
