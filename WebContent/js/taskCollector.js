@@ -63,7 +63,7 @@ function CreateTableFromJSON(list)
 
 	// CREATE DYNAMIC TABLE.
 	var table = document.createElement("table");
-	table.setAttribute('id', 'empTable'); 
+	table.setAttribute('id', 'taskTable'); 
 
 	// CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
 
@@ -126,8 +126,12 @@ function CreateTableFromJSON(list)
 	});
 }
 
-function addRow() {
-	var empTab = document.getElementById('empTable');
+function addRow()
+{
+	
+	document.getElementById('addRow').style.display = 'none';
+	document.getElementById('bt').style.display = 'inline-block';
+	var empTab = document.getElementById('taskTable');
 
 	var rowCnt = empTab.rows.length;        // GET TABLE ROW COUNT.
 	var tr = empTab.insertRow(rowCnt);      // TABLE ROW.
@@ -165,12 +169,14 @@ function addRow() {
 }
 //DELETE TABLE ROW.
 function removeRow(oButton) {
-	var empTab = document.getElementById('empTable');
+	var empTab = document.getElementById('taskTable');
 	empTab.deleteRow(oButton.parentNode.parentNode.rowIndex);       // BUTTON -> TD -> TR.
 }
 //EXTRACT AND SUBMIT TABLE DATA.
 function sumbit() {
-	var myTab = document.getElementById('empTable');
+	document.getElementById('addRow').style.display = 'inline-block';
+	document.getElementById('bt').style.display = 'none';
+	var myTab = document.getElementById('taskTable');
 	var values = new Array();
 
 	// LOOP THROUGH EACH ROW OF THE TABLE.

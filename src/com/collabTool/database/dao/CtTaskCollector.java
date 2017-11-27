@@ -1,19 +1,19 @@
 package com.collabTool.database.dao;
-
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
+
 import java.util.List;
 
-import com.collabTool.database.DatabaseConnector;
+
 import com.collabTool.database.object.CtTasks;
-import com.collabTool.database.object.CtUsers;
+
 import com.collabTool.main.CtConstants;
 
+@SuppressWarnings("rawtypes")
 public class CtTaskCollector extends BaseDao
 {
 	public static CtTaskCollector me=new CtTaskCollector();
+	@SuppressWarnings("unchecked")
 	public static List<CtTasks> getMyTasks(int userId)
 	{
 		String sql= "select * from " +  CtConstants.DB_Ct_TaskTable + " where taskId in (select taskId from " +  CtConstants.DB_Ct_UserTaskTable + " where userid='" + userId +"')";

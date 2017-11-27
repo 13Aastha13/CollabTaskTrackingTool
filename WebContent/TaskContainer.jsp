@@ -30,7 +30,7 @@ if (CurrentCtUser != null)
 </div>
 <p><input type="button" id="addRow" value="Add New Row" onclick="addRow()" /></p>
 <div id="showData"></div>
-<p><input type="button" id="bt" value="Sumbit Data" onclick="sumbit()" /></p>
+<p><input type="button" id="bt" value="Sumbit Data" onclick="sumbit()" style="display:none;" /></p>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 </html>
