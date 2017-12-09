@@ -17,7 +17,8 @@
 	} 
 	else {
 		//BrUsers CurrentBrUser = (BrUsers) request.getSession().getAttribute("BrUser");
-	    //CurrentBrUserName = CurrentBrUser.getUsername();%>
+	    //CurrentBrUserName = CurrentBrUser.getUsername();
+	    %>
 	    <div style="display: inline-block; position:absolute; right:0px; top:0px; 
 	    text-align:right;vertical-align:top;z-index:1000; margin:5px 5px 10px;">
 	    <jsp:include page="logoutPage.jsp"></jsp:include>
